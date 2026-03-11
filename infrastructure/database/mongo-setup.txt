@@ -1,0 +1,20 @@
+docker pull mongodb/mongodb-community-server:latest
+docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=nraboy -e MONGO_INITDB_ROOT_PASSWORD=password1234 --name mongodb mongodb/mongodb-community-server:latest
+
+
+To preserver data stored in mongodb
+When using a volume, you can be sure that your data will exist even after terminating or updating your container.
+docker volume create mongodb
+docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=nraboy -e MONGO_INITDB_ROOT_PASSWORD=password1234 -v mongodb:/data/db --name mongodb mongodb/mongodb-community-server:latest
+
+
+
+using docker compose
+docker compose up -d
+docker compose down
+The above command starts your stack in detached mode.
+
+url for connecting to mongodb : mongodb://nraboy:password1234@localhost:27017
+
+
+

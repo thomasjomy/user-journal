@@ -1,4 +1,4 @@
-package in.jt.journal.journal;
+package in.jt.journal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
